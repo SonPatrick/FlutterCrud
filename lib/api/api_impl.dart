@@ -1,23 +1,24 @@
 import 'package:flutter_crud/api/api_interface.dart';
+import 'package:flutter_crud/models/response_model.dart';
 
-abstract class ApiImpl implements ApiInterface {
+class ApiImpl implements ApiInterface {
   @override
-  Future<dynamic> deleteRegister(body) async {
+  Future<ResponseModel> deleteRegister(body) {
     throw UnimplementedError();
   }
 
   @override
-  Future<dynamic> getRegisters(body) async {
+  Future getRegisters(body) {
     throw UnimplementedError();
   }
 
   @override
-  Future<dynamic> postRegister(body) async {
+  Future postRegister(body) {
     throw UnimplementedError();
   }
 
   @override
-  Future<dynamic> updateRegisters(body) async {
+  Future<ResponseModel> updateRegisters(body) {
     throw UnimplementedError();
   }
 }
