@@ -10,8 +10,17 @@ class ApiUpdate extends ApiImpl {
   Future<ResponseModel> updateRegisters(Map body) async {
     var request = await http.post(
       Uri.parse(update),
+      headers: {
+        'Content-Type': 'application/json',
+        'Character-Encoding': 'utf-8'
+      },
       body: body,
     );
-    return ResponseModel.fromJson(json.decode(request.body));
+    return (request.statusCode >= 200 && request.statusCode < 300)
+        ? ResponseModel.fromJson(json.decode(request.body))
+        : ResponseModel(
+            success: 0,
+            message: "Erro de conexão.\nCódigo: ${request.statusCode}",
+          );
   }
 }
