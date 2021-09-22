@@ -1,24 +1,25 @@
 import 'package:flutter_crud/api/api_interface.dart';
 import 'package:flutter_crud/models/response_model.dart';
 
+///This class says "okay, I want implements your methods"
 class ApiImpl implements ApiInterface {
   @override
-  Future<ResponseModel> deleteRegister(body) {
+  Future<ResponseModel> deleteRegister(Map body) {
     throw UnimplementedError();
   }
 
   @override
-  Future getRegisters(body) {
+  Future getRegisters(Map body) {
     throw UnimplementedError();
   }
 
   @override
-  Future postRegister(body) {
+  Future postRegister(Map body) {
     throw UnimplementedError();
   }
 
   @override
-  Future<ResponseModel> updateRegisters(body) {
+  Future<ResponseModel> updateRegisters(Map body) {
     throw UnimplementedError();
   }
 }
